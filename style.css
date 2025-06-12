@@ -1,0 +1,510 @@
+:root 
+
+{
+
+/*------------------- PROJECT COLOR ROOT----------------------*/
+
+
+
+--main-color: #317ff5;
+--black-bg: #171717;
+--text-color-1: #2e2e2e;
+--text-color-2: #2e2e2e;
+--text-color-3: #757575;
+--text-color-4: #efefef;
+--text-color-5: #ffffff;
+--grey-bg: #f4f4f4;
+--main-bg: #ffffff;
+--border-color: #f7f7f7;
+
+
+
+/*------------------- FONT SIZE ROOT----------------------*/
+
+--paragraph-font-size: 16px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------- GENERAL STYLE----------------------*/
+
+body {
+    background-color: var(--main-bg);
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Pacifico", cursive; */
+    /* font-family: "Satisfy", cursive; */
+
+    height: 500vh;
+    overflow-x: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    color: var(--text-color-1);
+}
+
+
+.container-1 {
+    width: 58%;
+    max-width: 58%;
+    margin-inline: auto;
+}
+
+
+
+/*------------------- FONT STYLE----------------------*/
+
+
+.paragraph {
+    font-size: var(--paragraph-font-size);
+    line-height: 160%px;
+}
+
+
+
+
+
+
+
+
+/*------------------- HEADER STYLE----------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* backdrop-filter: blur(5px); */
+}
+
+
+.header-main-con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    padding: 10px 5px;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    /* border: 5px solid var(--border-color); */
+}
+
+
+.logo p {
+    color: var(--text-color-5);
+    font-size: 13px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--main-bg);
+    padding: 8px 8px 8px 30px;
+    border-radius: 100px;
+}
+
+.menu a {
+    color: var(--text-color-3);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.link-icon22 {
+    display: none;
+}
+
+
+.menu a p {
+    background-color: var(--main-color);
+    padding: 7px 15px;
+    border-radius: 100px;
+    color: var(--text-color-5);
+    font-weight: 500;
+    font-size: 14px;
+    border: 4px solid white;
+    outline: 1px solid var(--main-color);
+}
+
+
+
+
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- hero scetion ------------------------------ */
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--grey-bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Tablet Screen Size --------------------------- */
+
+
+@media screen and (max-width: 992px) {
+
+
+
+
+    
+.container-1 {
+    width: 90%;
+    max-width: 90%;
+}
+
+
+
+
+.menu {
+    position: fixed;
+    flex-direction: column;
+    top: -400px;
+    border-radius: 0;
+    width: 90%;
+    max-width: 90%;
+    margin-inline: auto;
+    align-items: center;
+    padding: 60px 50px 25px 50px;
+    border-radius: 20px;
+    gap: 40px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    transition: 1s ease;
+    opacity: 0;
+}
+
+.menu li  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu li a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-icon22 {
+    display: block;
+    font-size: 14px;
+}
+
+
+
+
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 100px;
+    background-color: var(--main-bg);
+}
+
+
+
+.icon {
+    display: none;
+    font-size: 40px;
+    color: var(--text-color-3);
+    transition: 1s ease;
+}
+
+
+
+
+/* ------------------------------------------- */
+
+
+.menu.open {
+    top: 90px;
+    opacity: 1;
+}
+
+
+
+.icon.visible {
+    display: block;
+}
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Tablet Screen Size --------------------------- */
+
+@media screen and (max-width: 768px) {
+
+:root {
+
+
+    /*------------------- FONT SIZE ROOT----------------------*/
+
+    --paragraph-font-size: 14px;
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+}
