@@ -11,6 +11,7 @@
 --text-color-1: #2e2e2e;
 --text-color-2: #2e2e2e;
 --text-color-3: #757575;
+--text-color-6: #a0a0a0;
 --text-color-4: #efefef;
 --text-color-5: #ffffff;
 --grey-bg: #f4f4f4;
@@ -20,8 +21,9 @@
 
 
 /*------------------- FONT SIZE ROOT----------------------*/
-
+--display-font-size: 80px;
 --paragraph-font-size: 16px;
+--font-20px-size: 20px;
 
 
 }
@@ -67,6 +69,13 @@ body {
 }
 
 
+.container-2 {
+    width: 87%;
+    max-width: 87%;
+    margin-inline: auto;
+}
+
+
 
 /*------------------- FONT STYLE----------------------*/
 
@@ -96,6 +105,7 @@ header {
     align-items: center;
     justify-content: space-between;
     /* backdrop-filter: blur(5px); */
+    z-index: 100;
 }
 
 
@@ -108,7 +118,7 @@ header {
 
 
 .logo {
-    padding: 10px 5px;
+    padding: 17px 5px;
     background-color: var(--main-color);
     border-radius: 4px;
     /* border: 5px solid var(--border-color); */
@@ -127,14 +137,14 @@ header {
     justify-content: center;
     gap: 30px;
     background-color: var(--main-bg);
-    padding: 8px 8px 8px 30px;
+    padding: 11px 11px 11px 30px;
     border-radius: 100px;
 }
 
 .menu a {
     color: var(--text-color-3);
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .link-icon22 {
@@ -144,13 +154,13 @@ header {
 
 .menu a p {
     background-color: var(--main-color);
-    padding: 7px 15px;
+    padding: 11px 15px;
     border-radius: 100px;
     color: var(--text-color-5);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
-    border: 4px solid white;
-    outline: 1px solid var(--main-color);
+    /* border: 4px solid white; */
+    /* outline: 1px solid var(--main-color); */
 }
 
 
@@ -175,9 +185,113 @@ header {
 /* ------------------------- hero scetion ------------------------------ */
 
 .hero {
-    height: 100vh;
+    padding: 70px 0;
     width: 100%;
     background-color: var(--grey-bg);
+    z-index: 50;
+}
+
+
+.hero-main-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.book-circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+
+.book {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book p {
+    font-size: var(--paragraph-font-size);
+    font-weight: 500;
+    color: var(--text-color-3);
+}
+
+
+.hero-title {
+    display: flex;
+    flex-direction: column; 
+}
+
+.hero-title p {
+    font-size: var(--display-font-size);
+    font-weight: 500;
+}
+
+.hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 70%;
+    font-size: var(--font-20px-size);
+    font-weight: 500;
+    line-height: 160%;
+}
+
+
+.hero-subtitle p {
+    color: var(--text-color-3);
+}
+
+.fancy-t {
+    font-style: italic;
+    color: var(--main-color);
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 130px;
+    background-color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-5);
+    border-radius: 100px;
+}
+
+
+.hero-icon-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-icon-main p {
+    color: var(--text-color-6);
+    font-size: var(--paragraph-font-size);
+}
+
+
+.hero-icon {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.hero-icon i {
+    color: var(--main-color);
 }
 
 
@@ -186,6 +300,95 @@ header {
 
 
 
+
+
+/* ------------------- mobile screen carousel ------------------------ */
+
+
+.carousel-wrapper {
+      position: relative;
+      width: 70%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      align-items: center;
+      height: 100%;
+    }
+
+    .slide {
+      flex: 0 0 270px;
+      height: 540px;
+      margin: 0 20px;
+      transform: scale(0.8);
+      opacity: 0.4;
+      filter: brightness(0.5) blur(1px);
+      transition: all 0.8s ease;
+      transform-origin: center;
+      border-radius: 20px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .slide.prev {
+      transform: scale(0.75) rotateY(25deg);
+    }
+
+    .slide.next {
+      transform: scale(0.75) rotateY(-25deg);
+    }
+
+    .slide.active {
+      transform: scale(1);
+      opacity: 1;
+      filter: none;
+      z-index: 2;
+    }
+
+    .slide.active img {
+      border-radius: 40px;
+    }
+
+    .frame-mask {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 290px;
+      height: 540px;
+      transform: translate(-50%, -50%);
+      border: 13px solid  var(--main-color);
+      border-radius: 40px;
+      z-index: 5;
+      pointer-events: none;
+      /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); */
+    }
+
+    .fade-left, .fade-right {
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .fade-left {
+      left: 0;
+      background: linear-gradient(to right, #f4f4f4 0%, transparent 100%);
+    }
+
+    .fade-right {
+      right: 0;
+      background: linear-gradient(to left, #f4f4f4 0%, transparent 100%);
+    }
 
 
 
@@ -361,8 +564,28 @@ header {
 
 
 
+:root {
+
+
+    /*------------------- FONT SIZE ROOT----------------------*/
+
+
+    --tablet-display-font-size: 60px;
+    --tablet-font-20px-size: 20px;
+
+}
+    
+
+
     
 .container-1 {
+    width: 75%;
+    max-width: 75%;
+}
+
+
+
+.container-2 {
     width: 90%;
     max-width: 90%;
 }
@@ -370,10 +593,217 @@ header {
 
 
 
+
+
+/* ------------------------------ hero section ----------------------------------- */
+
+
+.hero {
+    padding: 100px 0 70px 0;
+}
+
+
+.hero-main-con {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.hero-text {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+
+
+.hero-title {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-title p {
+    font-size: var(--tablet-display-font-size);
+    font-weight: 500;
+}
+
+.hero-subtitle {
+    width: 80%;
+    text-align: center;
+}
+
+
+
+
+.hero-icon-main {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- Tablet Screen Size --------------------------- */
+
+@media screen and (max-width: 768px) {
+
+:root {
+
+
+    /*------------------- FONT SIZE ROOT----------------------*/
+
+    --mobile-paragraph-font-size: 14px;
+    --mobile-display-font-size: 40px;
+    --mobile-tablet-font-20px-size: 18px;
+
+}
+    
+
+
+
+
+/* --------------------- Header styling ---------------------------- */
+
+
+   
+.container-1 {
+    width: 90%;
+    max-width: 90%;
+}
+
+
 .menu {
     position: fixed;
     flex-direction: column;
-    top: -400px;
+    top: -300px;
     border-radius: 0;
     width: 90%;
     max-width: 90%;
@@ -415,8 +845,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     border-radius: 100px;
     background-color: var(--main-bg);
 }
@@ -425,9 +855,9 @@ header {
 
 .icon {
     display: none;
-    font-size: 40px;
+    font-size: 30px;
     color: var(--text-color-3);
-    transition: 1s ease;
+    
 }
 
 
@@ -445,13 +875,54 @@ header {
 
 .icon.visible {
     display: block;
+    transition: 3s ease;
 }
 
 
 
 
 
-    
+
+
+
+/* ------------------------------ hero section ----------------------------------- */
+
+
+.hero-title p {
+    font-size: var(--mobile-display-font-size);
+    font-weight: 500;
+}
+
+.hero-subtitle {
+    width: 90%;
+    text-align: center;
+}
+
+
+
+
+
+/* ------------------- mobile screen carousel ------------------------ */
+
+
+.carousel-wrapper {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+    }
+
+
+
+
+.fade-left {
+    left: -60px;
+    background: linear-gradient(to right, #f4f4f4 0%, transparent 100%);
+}
+
+.fade-right {
+    right: -60px;
+    background: linear-gradient(to left, #f4f4f4 0%, transparent 100%);
 }
 
 
@@ -463,39 +934,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------- Tablet Screen Size --------------------------- */
-
-@media screen and (max-width: 768px) {
-
-:root {
-
-
-    /*------------------- FONT SIZE ROOT----------------------*/
-
-    --paragraph-font-size: 14px;
-
-}
-    
 
 
 

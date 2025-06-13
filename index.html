@@ -16,6 +16,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
 
@@ -65,8 +67,20 @@
 
 
             <label id="menu-toggle" class="menu-toggle" for="">
-                <i class="uil uil-bars icon visible" id="open-icon"></i>
-                <i class="uil uil-times icon" id="close-icon"></i>
+                <svg class="icon visible" id="open-icon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="4" width="32" height="1" fill="#333"/>
+                    <rect y="17" width="32" height="1" fill="#333"/>
+                </svg>
+                
+
+
+                <svg class="icon" id="close-icon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4" y1="4" x2="28" y2="20" stroke="#333" stroke-width="1"/>
+                    <line x1="4" y1="20" x2="28" y2="4" stroke="#333" stroke-width="1"/>
+                </svg>
+
+                <!-- <i class="uil uil-bars icon visible" id="open-icon"></i> -->
+                <!-- <i class="uil uil-times icon" id="close-icon"></i> -->
             </label>
 
         </div>
@@ -78,6 +92,57 @@
     <!-- -------------------- Hero section -------------------------- -->
 
     <section class="hero">
+
+        <div class="hero-main-con container-2">
+
+            <div class="hero-text">
+
+
+                <div class="book">
+                    <div class="book-circle"></div>
+                    <p>Let's start building today!</p>
+                </div>
+                
+                <div class="hero-title">
+                    <p>Hello, i'm <span class="fancy-t">Clinton.</span></p>
+                    <p><span class="fancy-t">nice</span> to meet you. </p>
+                </div>
+
+                <div class="hero-subtitle">
+                    <p>I'm a passionate web developer with a knack for creating stunning and functional websites.</p>
+                </div>
+
+                <a href="">
+                    <div class="hero-btn">
+                        Hire me
+                    </div>
+                </a>
+
+
+                <div class="hero-icon-main">
+                    <div class="hero-icon">
+                        <i class="uis uis-star"></i>
+                        <i class="uis uis-star"></i>
+                        <i class="uis uis-star"></i>
+                        <i class="uis uis-star"></i>
+                        <i class="uis uis-star-half-alt"></i>
+                    </div>
+                    <p>Over 20+ Five Star Reviews</p>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="track"></div>
+                <div class="frame-mask"></div>
+                <div class="fade-left"></div>
+                <div class="fade-right"></div>
+            </div>
+            
+        </div>
         
     </section>
 
