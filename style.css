@@ -24,6 +24,8 @@
 --display-font-size: 80px;
 --paragraph-font-size: 16px;
 --font-20px-size: 20px;
+--font-40px-size: 40px;
+--font-18px-size: 18px;
 
 
 }
@@ -254,7 +256,7 @@ header {
 }
 
 .fancy-t {
-    font-style: italic;
+    /* font-style: italic; */
     color: var(--main-color);
 }
 
@@ -262,7 +264,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 60px;
     width: 130px;
     background-color: var(--main-color);
     font-size: 20px;
@@ -395,6 +397,273 @@ header {
 
 
 
+    /* ------------------------------- section 1 -------------------------- */
+
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        padding: 100px 0 50px 0;
+    }
+
+
+    .socials-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    
+    .social-p {
+        font-size: var(--font-40px-size);
+        font-weight: 500;
+        margin-right: 10px;
+        line-height: 140%;
+        text-align: center;
+    }
+
+
+
+    .intsagram-2 {
+        width: 45px;
+        display: inline-block; 
+        transform: rotate(-10deg);
+        transition: transform 0.3s ease; 
+    }
+
+
+    .intsagram-2:hover {
+        transform: rotate(0deg); 
+    }
+
+
+    .twitter-2 {
+        width: 60px;
+        display: inline-block; 
+        transform: rotate(-10deg);
+        transition: transform 0.3s ease; 
+    }
+
+    .twitter-2:hover {
+        transform: rotate(0deg); 
+    }
+
+
+    .tiktok-2 {
+        width: 70px;
+        display: inline-block; 
+        transform: rotate(10deg);
+        transition: transform 0.3s ease; 
+        margin-left: 8px;
+    }
+
+
+    .tiktok-2:hover {
+        transform: rotate(0deg); 
+    }
+
+
+
+
+    .logo-2 {
+      animation: shake 1.8s infinite ease-in-out;
+    }
+
+    
+
+    @keyframes shake {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      20% {
+        transform: rotate(6deg);
+      }
+      40% {
+        transform: rotate(-7deg);
+      }
+      60% {
+        transform: rotate(3deg);
+      }
+      80% {
+        transform: rotate(-7deg);
+      }
+    }
+
+    /* Optional: slightly offset timing for variation */
+    .logo:nth-child(2) { animation-delay: 0.3s; }
+    .logo:nth-child(3) { animation-delay: 0.4s; }
+    
+
+   
+
+
+
+
+
+
+
+
+/* -------------------------- counter-section ---------------------------------- */
+
+
+
+    .count-main-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 50px 0;
+    }
+
+
+
+    .cross-img {
+        width: 120px;
+    }
+
+
+
+    .cross-img img{
+        width: 100%;
+    }
+
+
+
+    .counter-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 50px; */
+        width: 70%;
+    }
+
+
+    .counter-box {
+        display: flex;
+        align-items: end;
+    }
+
+
+    .count-con-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+
+    .counter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .counter-box span {
+        color: var(--text-color-6);
+        font-size: 80px;
+        font-weight: 200;
+    }
+
+
+    .counter-box i {
+        color: var(--text-color-6);
+        font-size: 60px;
+    }
+
+    .counter-container p {
+        color: var(--text-color-3);
+        font-size: var(--paragraph-font-size);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------- hard skills --------------------------- */
+
+
+    .hard-main-skill-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 25px;
+        padding: 70px 0;
+    }
+
+    .hard-skill-con {
+        width: 50%;
+        max-width: 50%;
+        margin-inline: auto;
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+
+    .hard-skill-con h2 {
+        margin-bottom: 25px;
+        font-weight: 100;
+    }
+
+
+    .hard-skill-ani {
+        display: flex;
+        gap: 10px;
+        width: 300vw;
+        animation: movingtext 25s linear infinite;
+    }
+
+
+    @keyframes movingtext {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-120vh);
+        }
+        
+    }
+
+
+    .hard-skill {
+        width: 120px;
+        background-color: var(--grey-bg);
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+
+    .hard-skill img {
+        width: 100%;
+    }
+
+
+
+
+    .btn-con-33 {
+        padding: 70px 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 
 
 
@@ -651,6 +920,136 @@ header {
 
 
 
+/* -------------------------- counter-section ---------------------------------- */
+
+
+
+    .counter-section {
+        width: 70%;
+    }
+
+    
+
+    .count-con-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+
+    .counter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .counter-box span {
+        color: var(--text-color-6);
+        font-size: 50px;
+        font-weight: 200;
+    }
+
+
+    .counter-box i {
+        color: var(--text-color-6);
+        font-size: 40px;
+    }
+
+    .counter-container p {
+        color: var(--text-color-3);
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+
+
+
+    
+
+    /* ----------------------- hard skills --------------------------- */
+
+
+
+    
+    .hard-main-skill-con {
+        flex-direction: column-reverse;
+    }
+
+
+    
+    .hard-skill-con {
+        width: 80%;
+        max-width: 80%;
+    }
+
+
+
+    .hard-skill {
+        width: 90px;
+        padding: 20px;
+    }
+
+
+
+    
+    .hard-skill-con h2 {
+        margin-bottom: 20px;
+        font-weight: 100;
+        font-size: 18px;
+    }
+
+
+
+    
+    .btn-con-33 {
+        padding: 10px 0 70px 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,6 +1170,43 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------- Tablet Screen Size --------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -783,6 +1219,8 @@ header {
     --mobile-paragraph-font-size: 14px;
     --mobile-display-font-size: 40px;
     --mobile-tablet-font-20px-size: 18px;
+    --mobile-font-40px-size: 28px;
+    --mobile-font-18px-size: 16px;
 
 }
     
@@ -927,6 +1365,30 @@ header {
 
 
 
+/* ------------------------------- section 1 -------------------------- */
+
+    
+    .social-p {
+        font-size: var(--mobile-font-40px-size);
+        font-weight: 500;
+        margin-right: 10px;
+        line-height: 140%;
+        text-align: center;
+    }
+
+
+
+
+
+
+    
+/* -------------------------- counter-section ---------------------------------- */
+
+
+
+    .counter-section {
+        width: 100%;
+    }
 
 
 

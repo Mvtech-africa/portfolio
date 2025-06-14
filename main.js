@@ -86,3 +86,61 @@ function toggleMenu () {
   let autoSlide = setInterval(nextSlide, 3000);
 
   updatePosition();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //  number count
+
+  const counters = document.querySelectorAll('.counter');
+
+function animateCount(element, target, duration) {
+  const start = 0;
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const currentNumber = Math.floor(progress * target);
+    element.textContent = currentNumber.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = target.toLocaleString(); // ensure final value
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+// Intersection Observer to trigger all counters at once
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counters.forEach(counter => {
+        const targetNumber = parseInt(counter.dataset.target, 10);
+        animateCount(counter, targetNumber, 1000); // 3 seconds animation
+      });
+      obs.unobserve(entry.target); // Stop observing after trigger
+    }
+  });
+}, { threshold: 1.0 });
+
+counters.forEach(counter => observer.observe(counter));
