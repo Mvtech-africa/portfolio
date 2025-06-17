@@ -144,3 +144,74 @@ const observer = new IntersectionObserver((entries, obs) => {
 }, { threshold: 1.0 });
 
 counters.forEach(counter => observer.observe(counter));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  circel pointer on projectd
+
+
+
+const currentCircle = null;
+
+  function showCircle(e) {
+    const project = e.currentTarget;
+    project.classList.add('hover');
+    moveCircle(e);
+  }
+
+  function moveCircle(e) {
+    const project = e.currentTarget;
+    const circle = project.querySelector('.circle');
+    const rect = project.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Position the circle centered on cursor
+    circle.style.left = x + 'px';
+    circle.style.top = y + 'px';
+  }
+
+  function hideCircle(e) {
+    const project = e.currentTarget;
+    project.classList.remove('hover');
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

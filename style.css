@@ -14,6 +14,7 @@
 --text-color-6: #a0a0a0;
 --text-color-4: #efefef;
 --text-color-5: #ffffff;
+--text-color-7: #f3eeee;
 --grey-bg: #f4f4f4;
 --main-bg: #ffffff;
 --border-color: #f7f7f7;
@@ -21,7 +22,7 @@
 
 
 /*------------------- FONT SIZE ROOT----------------------*/
---display-font-size: 80px;
+--display-font-size: 70px;
 --paragraph-font-size: 16px;
 --font-20px-size: 20px;
 --font-40px-size: 40px;
@@ -44,8 +45,8 @@
 
 body {
     background-color: var(--main-bg);
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-family: "Poppins", sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Poppins", sans-serif;
     /* font-family: "Pacifico", cursive; */
     /* font-family: "Satisfy", cursive; */
 
@@ -106,7 +107,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* backdrop-filter: blur(5px); */
+    backdrop-filter: blur(5px);
     z-index: 100;
 }
 
@@ -122,8 +123,8 @@ header {
 .logo {
     padding: 17px 5px;
     background-color: var(--main-color);
-    border-radius: 4px;
-    /* border: 5px solid var(--border-color); */
+    border: 2px solid white;
+    border-radius: 8px;
 }
 
 
@@ -148,6 +149,13 @@ header {
     font-size: 16px;
     font-weight: 600;
 }
+
+
+/* .menu a:hover {
+    background-color: var(--main-color);
+    padding: 11px 15px;
+    border-radius: 100px;
+} */
 
 .link-icon22 {
     display: none;
@@ -238,6 +246,7 @@ header {
 .hero-title p {
     font-size: var(--display-font-size);
     font-weight: 500;
+    line-height: 110%;
 }
 
 .hero-subtitle {
@@ -268,7 +277,7 @@ header {
     width: 130px;
     background-color: var(--main-color);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color-5);
     border-radius: 100px;
 }
@@ -545,7 +554,7 @@ header {
 
     .counter-box {
         display: flex;
-        align-items: end;
+        align-items: center;
     }
 
 
@@ -568,7 +577,7 @@ header {
 
     .counter-box span {
         color: var(--text-color-6);
-        font-size: 80px;
+        font-size: 100px;
         font-weight: 200;
     }
 
@@ -619,7 +628,7 @@ header {
 
     .hard-skill-con h2 {
         margin-bottom: 25px;
-        font-weight: 100;
+        /* font-weight: 100; */
     }
 
 
@@ -667,6 +676,365 @@ header {
 
 
 
+    /* -------------------- how con styling ------------------------- */
+
+
+    .how {
+        background-color: var(--grey-bg);
+        padding: 80px 0;
+    }
+
+
+    .how-main-con {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .how-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .h2-grey {
+        color: var(--text-color-3);
+    }
+  
+
+    .how-detail p {
+        font-size: var(--display-font-size);
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+
+    .how-animate {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 60px;
+    }
+
+
+    .how-con-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 380px;
+        background-color: var(--main-bg);
+        padding: 30px 30px 30px 30px;
+        border-radius: 20px;
+        border: 10px solid var(--border-color);
+    }
+
+    .how-con-1 {
+        display: flex;
+        gap: 10px;
+    }
+
+    .e-width453 {
+        width: 47%;
+    }
+
+    .how-con-2 h1 {
+        font-size: 90px;
+        font-weight: 200;
+        color: var(--text-color-7);
+        font-style: italic;
+    }
+
+
+    .how-con-2 p {
+        font-size: var(--font-18px-size);
+        font-weight: 400;
+        color: var(--text-color-3);
+        line-height: 130%;
+    }
+
+
+    .how-con-2 h2 {
+        font-size: 28px;
+        font-family: 400;
+    }
+
+    .how-con-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+
+
+    /* -------------------------------- projects --------------------------- */
+
+    .projects {
+        padding: 100px 0;
+    }
+
+
+    .project-main-con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+
+    .project-main-con-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    .p-img-con {
+        width: 100%;
+        /* height: 260px; */
+        overflow: hidden; /* Ensures image stays within boundary */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px; /* Rounded corners for the container */
+    }
+
+    .p-img-con img {
+        width: 100%;
+        /* height: 100%; */
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 10px; /* Same as container to ensure uniform rounded edges */
+        /* background-size: cover; */
+        transform: scale(1.1);
+    }
+
+
+    
+    .p-img-con img:hover {
+        transform: scale(1.2);
+        /* filter: grayscale(10); */
+        /* Optional: add a shadow or other effects */
+    }
+
+
+
+    .p-con-3 {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--grey-bg);
+        padding: 10px 10px 0 10px;
+        border-radius: 20px;
+        transition: 0.2s ease;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+    }
+
+    .p-con-3:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+        transform: translateY(-10px); /* Slight lift effect on hover */
+    }
+
+
+    
+
+
+    .p323 {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+        color: var(--text-color-7);
+        font-size: 13px;
+        font-weight: 600;
+        padding: 7px 20px;
+        border-radius: 100px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.342);
+    }
+
+
+    .project-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: fit-content;
+        padding: 0 30px;
+        background-color: var(--main-color);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--text-color-5);
+        border-radius: 100px;
+    }
+
+
+    .p-con-3 p {
+        font-size: 22px;
+        padding: 20px 0 20px 20px;
+        font-weight: 500;
+    }
+
+
+
+
+    /* Circle styling */
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    pointer-events: none; /* so it doesn't block mouse events */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+  }
+
+  
+
+  /* Show and animate circle on hover */
+  .p-con-3.hover .circle {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+
+
+
+
+
+  /* --------------------my services --------------------------------- */
+
+
+  .services {
+    background-color: var(--grey-bg);
+    padding: 200px 0 100px 0;
+  }
+
+
+
+  .services-main-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .services-main-con h2 {
+    position: sticky;
+    top: 150px;
+  }
+
+
+
+  .skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    padding: 200px 0 0 0;
+  }
+
+  .services-main-con h1 {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 300px;
+    margin-top: 200px;
+    font-size: 80px;
+    font-weight: 500;
+    background-color: var(--main-bg);
+    /* padding: 20px 50px; */
+    width: 55%;
+    height: 130px;
+  }
+
+
+
+
+  .ani-p {
+    font-size: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*----------------AUTO ROTATE ON SCROLL------------------*/
+
+
+/* <div class="auto-rotate"></div> */
+
+
+
+
+
+.auto-rotate {
+  animation: auto-rotate-animation 3s linear forwards 20s;
+  animation-timeline: view(70%);
+}
+
+
+
+
+@keyframes auto-rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+.auto-rotate-opposite  {
+  animation: auto-rotate-animation-opposite 3s linear forwards 20s;
+  animation-timeline: view(70%);
+}
+
+
+
+
+@keyframes auto-rotate-animation-opposite {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-10deg);
+  }
+}
 
 
 
@@ -694,6 +1062,313 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------- why me ----------------------------- */
+
+.why-me {
+    padding: 100px 0;
+    background-color: var(--black-bg);
+}
+
+
+.why-me-main-con {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.why-me-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+
+.why-icon svg {
+    color: var(--main-color);
+    padding-top: 3px;
+}
+
+
+.why-con-1 {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.why-con-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.why-con-2 h1 {
+    font-weight: 500;
+    font-size: var(--font-20px-size);
+    color: var(--text-color-5);
+}
+
+
+
+.why-con-2 p {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-color-6);
+}
+
+
+
+.why-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: fit-content;
+    padding: 0 30px;
+    background-color: var(--main-bg);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--black-bg);
+    border-radius: 100px;
+}
+
+
+.convert-1 p {
+    color: var(--text-color-4);
+}
+
+
+
+/* -------------------------------  Testimonials ----------------------------- */
+
+.test {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+
+
+.test-main-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+
+.client-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    /* background-color: var(--main-color); */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+
+.grey11 {
+    background-color: var(--grey-bg);
+}
+
+
+
+.grey11 > p {
+    color: var(--text-color-3);
+    line-height: 160%;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+.grey11  h1 {
+    line-height: 160%;
+    font-weight: 500;
+}
+
+
+
+.grey11 .c-address-con p {
+    color: var(--text-color-3);
+    line-height: 160%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+
+
+.blue11 {
+    background-color: var(--main-color);
+}
+
+
+.blue11 > p {
+    color: var(--text-color-5);
+    line-height: 160%;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+.blue11  h1 {
+    color: var(--text-color-5);
+    line-height: 160%;
+    font-weight: 500;
+}
+
+
+
+.blue11 .c-address-con p {
+    color: var(--text-color-5);
+    line-height: 160%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+
+.client-con-1 {
+    display: flex;
+    gap: 10px;
+}
+
+.c-address-con {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.c-image-con {
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.c-image-con img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    display: block;
+    scale: 1.1;
+}
+
+
+
+/* -------------------------- Faq ------------------------------------ */
+
+
+.faq {
+    padding: 100px 0;
+    background-color: var(--grey-bg);
+}
+
+.faq-major-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main-heading-con-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.main-heading-con-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.center-heading {
+    text-align: center;
+}
+
+
+
+.faq-main-con {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 74%;
+    max-width: 74%;
+    margin-inline: auto;
+}
+
+
+.faq-con-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: var(--main-bg);
+    padding: 20px 30px;
+    border-radius: 10px;
+
+}
+
+.close {
+    display: none;
+}
+
+.faq-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-toggle i {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+
+.faq-toggle h2 {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0;
+}
+
+
+.faq-con-1 p {
+    font-size: var(--paragraph-font-size);
+    color: var(--text-color-3);
+    line-height: 160%;
+    font-weight: 500;
+}
 
 
 
@@ -962,6 +1637,7 @@ header {
     .counter-container p {
         color: var(--text-color-3);
         font-size: 12px;
+        line-height: 160%;
         text-align: center;
     }
 
@@ -1009,6 +1685,109 @@ header {
     .btn-con-33 {
         padding: 10px 0 70px 0;
     }
+
+
+
+
+
+
+    
+    /* -------------------- how con styling ------------------------- */
+
+
+    .how-main-con {
+        gap: 20px;
+    }
+
+    
+    .how-animate {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    
+    .how-con-2 {
+        padding: 30px;
+        height: 280px;
+        width: 300px;
+    }
+
+
+    
+    .how-con-2 h1 {
+        font-size: 60px;
+    }
+
+
+
+    .how-con-3 {
+        gap: 10px;
+    }
+
+
+    
+    .how-con-3 h2 {
+        font-size: 20px;
+        font-family: 100;
+    }
+
+
+    
+    .how-con-3 p {
+        font-size: 14px;
+        line-height: 160%;
+    }
+
+
+    .how-detail p {
+        font-size: 45px;
+    }
+
+
+
+
+
+      
+  /* --------------------my services --------------------------------- */
+
+
+
+
+
+
+    .services-main-con h1 {
+        font-size: 40px;
+        width: 90%;
+        height: 100px;
+    }
+
+
+
+
+
+
+
+
+/* ----------------------------------- why me ----------------------------- */
+
+.why-me-con {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+/* -------------------------------  Testimonials ----------------------------- */
+
+
+
+
+.test-main-con {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
 
 
 
@@ -1389,6 +2168,113 @@ header {
     .counter-section {
         width: 100%;
     }
+
+
+    .counter-box span {
+        font-weight: 600;
+    }
+
+
+
+    
+    /* ----------------------- hard skills --------------------------- */
+
+
+
+    
+    .hard-main-skill-con {
+        flex-direction: column-reverse;
+    }
+
+
+    
+    .hard-skill-con {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+
+    /* -------------------------------- projects --------------------------- */
+
+
+    .project-main-con-2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+
+    .p323 {
+        top: 50px;
+    }
+
+
+
+    /* .p-img-con {
+        height: 200px;
+    } */
+
+
+
+
+
+
+  
+
+
+
+    /* ----------------------------------- why me ----------------------------- */
+
+    .why-me-con {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+
+
+    /* -------------------------------  Testimonials ----------------------------- */
+
+
+
+
+    .test-main-con {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+    /* ------------------------- faq ---------------------------------- */
+
+
+    
+
+    .faq-main-con {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+
+    
+    .faq-toggle h2 {
+        font-size: 17px;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
