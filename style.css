@@ -43,6 +43,14 @@
 
 /*------------------- GENERAL STYLE----------------------*/
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
 body {
     background-color: var(--main-bg);
     /* font-family: Arial, Helvetica, sans-serif; */
@@ -507,7 +515,137 @@ header {
     .logo:nth-child(3) { animation-delay: 0.4s; }
     
 
-   
+
+
+
+    /* --------------------------reflecton styling--------------------- */
+
+    .reflection {
+        padding: 10px 0;
+    }
+
+    .r-main-con {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .r-con {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 80%;
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+
+    .r-con-1 {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        background-color: var(--grey-bg);
+        padding: 9px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+    }
+
+
+
+    .r-con-1 p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 160%;
+    }
+
+
+
+
+    .alin-count {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .r-con-1:hover {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .box342 .counter, 
+    .box342 span {
+        color: var(--text-color-6);
+    }
+    
+
+    .box342 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        background-color: var(--black-bg);
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); */
+        font-size: 50px;
+        font-weight: 600;
+        padding: 30px;
+    }
+
+    /* Pseudo-element for reflection pass */
+    .box342::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%; /* start outside the left boundary */
+        width: 10%; /* width of the moving reflection */
+        height: 100%;
+        background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.0),
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.0)
+        );
+        transform: skewX(30deg);
+        opacity: 0.8;
+        animation: pass 3s linear infinite;
+        pointer-events: none; /* ensure it doesn't interfere with interactions */
+    }
+
+    @keyframes pass {
+        0% {
+        left: -50%;
+        }
+        100% {
+        left: 150%;
+        }
+    }
+
+
+
+
+
+    /* Set different delays for each box using nth-child */
+    .reflection .box342:nth-child(1)::after {
+        animation-delay: 0s;
+    }
+
+    .reflection .box342:nth-child(2)::after {
+        animation-delay: 1s; /* delay by 1 second */
+    }
+
+    .reflection .box342:nth-child(3)::after {
+        animation-delay: 2s; /* delay by 2 seconds */
+    }
+
+    .reflection .box342:nth-child(4)::after {
+        animation-delay: 3s; /* delay by 3 seconds, can be reset to cycle again */
+    }
 
 
 
@@ -842,12 +980,12 @@ header {
     .p323 {
         position: absolute;
         top: 16px;
-        left: 20px;
+        left: 16px;
         color: var(--text-color-7);
         font-size: 13px;
         font-weight: 600;
         padding: 7px 20px;
-        border-radius: 100px;
+        border-radius: 8px;
         backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.342);
     }
@@ -889,7 +1027,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffff;
+    background-color: #317ff544;
     font-weight: 400;
     font-size: 14px;
     pointer-events: none; /* so it doesn't block mouse events */
@@ -2300,6 +2439,31 @@ footer {
 
 
 
+
+
+
+
+/* --------------------------- reflection ---------------------------------- */
+
+
+
+.r-con {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------------------- counter-section ---------------------------------- */
 
 
@@ -3000,6 +3164,43 @@ footer {
 
 
 
+    /* --------------------------- reflection ---------------------------------- */
+
+
+
+
+
+    .r-con {
+        width: 900%;
+        max-width: 90%;
+    }
+
+
+
+
+    .box342 {
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+        border-radius: 5px;
+    }
+
+
+    .r-con-1 {
+        border-radius: 10px;
+        padding: 4px;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     
 /* -------------------------- counter-section ---------------------------------- */
@@ -3047,10 +3248,16 @@ footer {
 
 
     .p323 {
-        top: 50px;
+        color: var(--text-color-7);
+        font-size: 10px;
     }
 
 
+
+    .p-con-3 p {
+        font-size: 14px;
+        padding: 15px;
+    }
 
     /* .p-img-con {
         height: 200px;
