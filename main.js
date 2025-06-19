@@ -200,6 +200,24 @@ const currentCircle = null;
 
 
 
+  // ------------------- faq code--------------------
+
+    
+  function toggleDropdown(menuId) {  
+    const menu = document.getElementById(menuId);  
+    const angleIcon = document.getElementById(`angle${menuId.charAt(menuId.length - 1)}`);  
+    
+    if (menu.style.display === "block") {  
+        menu.style.display = "none";  
+        angleIcon.style.transform = "rotate(0deg)";  
+    } else {  
+        menu.style.display = "block";  
+        angleIcon.style.transform = "rotate(-180deg)";  
+    }  
+  }
+
+
+
 
 
 
